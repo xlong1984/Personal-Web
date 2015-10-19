@@ -1,0 +1,194 @@
+<html>
+<head>
+    <meta http-equiv = "content-Type" content = "text/html; charset = gb2312">
+	<title>Shulin Qian personal website</title>
+    <link href="./CSS/projects.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="./JS/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="./JS/projects.js"></script>
+    <script type="text/javascript" src="./JS/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript">
+        var data = { 0: ["eGoods second-hand shopping website", "./PIC/project1/img1-4.png", "./PIC/project1/img1-3.png", "./PIC/project1/img1-2.png", "./PIC/project1/img1-1.png", "https://github.com/xlong1984/eGoods"], 1: ["Job Helper website", "./PIC/project2/img2-1.png", "./PIC/project2/img2-2.png", "./PIC/project2/img2-3.png", "./PIC/project2/img2-4.png","https://github.com/xlong1984/Job-Helper"], 2: ["Tetris on Embeded System", "./PIC/project3/img3-3.png", "./PIC/project3/img3-2.png", "./PIC/project3/img3-1.png", "", "https://github.com/xlong1984/Tetris-On-Gumstix"], 3: ["Room Occupancy Sensing", "./PIC/project4/img4-3.png", "./PIC/project4/img4-4.png", "./PIC/project4/img4-5.png", "./PIC/project4/img4-6.png"] };
+        $(function () {
+            $(".projectsDiv").hover(function () { $(this).children(".imgs").fadeIn(500); }, function () {
+                $(this).children(".imgs").fadeOut(500);
+            });
+            $(".projectsDiv").click(function () {
+                $("html,body").animate({ scrollTop: 0 }, 500);
+                $("#container").hide();
+                $("#details").fadeIn(1000);
+                var num = parseInt($(this).attr("id").charAt(7));
+                var infos = data[num];
+                //alert(infos[0]);
+                $("#projectName").text(infos[0]);
+                $("#liImg0").attr("src", infos[1]);
+                $("#liImg1").attr("src", infos[2]);
+                $("#liImg2").attr("src", infos[3]);
+                $("#liImg3").attr("src", infos[4]);
+                $("#gitLinks a").attr("href", infos[5]);
+                $("#ins" + num).show();
+            })
+            $("#return").click(function () {
+                $("#details").fadeOut(1000);                
+                setTimeout(function () { $("#container").show(); $("#projectInfo li").hide(); }, 1000);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id = "header" name = "header">
+	    <div id="headBarLeft" name="headBarLeft"> </div>
+	    <img src="./PIC/myName.png" id="myName" name="myName"/>
+	    <div id="headBarRight" name="headBarRight"> 
+            <a href="./index.html"><span id="homeTag" name="homeTag" onmouseover="change('homeTag',this)" onmouseout="change2('homeTag',this)">home</span></a>
+		    <a href="./projects.html"><span id="projects" name="projects" onmouseover="change('projects',this)" onmouseout="change2('projects',this)" style="color:red;">projects</span></a>
+		    <a href="./about.html"><span id="about" name="about" onmouseover="change('about',this)" onmouseout="change2('about',this)">contact</span></a>
+	    </div>
+    </div>
+    <!--End of header-->
+    <div id="container" name="container">
+	    <div id="mainPart" name="mainPart">
+            <div id="myblock1" class="blocks" style="float:left;"></div>
+            <div id="titleBar">
+                <img src="./PIC/pTitle.png" style="display:block; float:left;" />
+                <div style="float: left; width: 100%; border-bottom: 2px #000000 solid;"></div>
+            </div>
+            <div id="project0" class="projectsDiv" >
+                <img src="./PIC/project1/final1-1.png" width="400" class="imgs" />
+                <div id="projectTitle1" class="titleDiv" style="background:url('./PIC/elements/border1-2.png');"><span>eGoods second-hand shopping website</span></div>
+            </div>
+            <div id="project1" class="projectsDiv">
+                <img src="./PIC/project2/final2-1.png" width="400" class="imgs" />
+                <div id="projectTitle2" class="titleDiv" style="background:url('./PIC/elements/border2-2.png')"><span style="float:right; text-align:right;">Job Helper website</span></div>
+            </div>
+            <div id="project2" class="projectsDiv">
+                <img src="./PIC/project3/final3-1.png" width="400" class="imgs" />
+                <div id="projectTitle3" class="titleDiv" style="background:url('./PIC/elements/border3-2.png')"><span style="margin-top:373px;">Tetris on Embeded System</span></div>
+            </div>
+            <div id="project3" class="projectsDiv">
+                <img src="./PIC/project4/final4-1.png" width="400" class="imgs" />
+                <div id="projectTitle4" class="titleDiv" style="background:url('./PIC/elements/border4-2.png')"><span style="float:right; text-align:right; margin-top:373px;">Room Occupancy Sensing</span></div>
+            </div>
+        </div>
+    </div>
+    <div id="details" style="display:none;">
+        <div id="projectDetails">
+            <div id="projectName">
+                Tetris on Embeded System
+            </div>
+            <div class="block2"></div>
+            <!--Start of img shif-->
+            <div id="imgShift">
+                <ul class="slideul1">
+                    <li class="slideli1">
+                        <ul class="slideul2">
+                            <li><img id="liImg0" src="" height="364"></li>
+                            <li>&nbsp&nbsp&nbsp&nbsp</li>
+                            <li><img id="liImg1" src="" height="364"></li>
+                            <li>&nbsp&nbsp&nbsp&nbsp</li>
+                            <li><img id="liImg2" src="" height="364"></li>
+                            <li>&nbsp&nbsp&nbsp&nbsp</li>
+                            <li><img id="liImg3" src="" height="364"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                var _speed = 30;
+                var _slide = $("#imgShift");
+                var _slideli1 = $(".slideli1");
+                var _slideli2 = $(".slideli2");
+                _slideli2.html(_slideli1.html());
+                function Marquee() {
+                    if (_slide.scrollLeft() >= _slideli1.width() - 500)
+                        _slide.scrollLeft(100);
+                    else {
+                        _slide.scrollLeft(_slide.scrollLeft() + 1);
+                    }
+                }
+                $(function () {
+                    var sliding = setInterval(Marquee, _speed);
+                    _slide.hover(function () {
+                        clearInterval(sliding);
+                    }, function () {
+                        sliding = setInterval(Marquee, _speed);
+                    });
+                });
+            </script>
+            <!--End of img shif-->
+            <div class="block2"></div>
+            <div id="projectInfo">
+                <ul>
+                    <li id="ins0" class="lis2">
+                        The intention for this project is to build a bridge for people who sell their second hand products frequently and those who wnat to buy something with fair price.
+                        Not like Amazon and eBay, customers can easily create an account to open their own online exchange store. This store is most likely a bazzar since all the items listed are all from the seller in different kinds.<br/><br/>
+                        Like all the other shopping websites, we divide the stores in groups. When a buyer want to exchange a camera for a printer, he just need to go to the electronic department and seek for what he wants.
+                        After a customer make a decision before exchange, he can contact and bargin with the seller. So the top important thing of our website is that the price for a certain item is not invariable, you can always get a product with your desired price.<br/><br/>
+                        As a group project, I also learned a lot of knowledge concerning software engineering, Such like how to make a waterfall and iteration plan, how to choose the right time-saving design pattern and how to work in an agile  environment.
+                    </li>
+                    <li id="ins1" class="lis2">
+                        Job Helper is a job hunting website. Compared to traditional job searching website, Job helper is designed to help recruiters find the most suitable person for the position by letting them fill in customized questionnaire. 
+                        Another unique feature for job helper is recruiter and applicant can talk through Chat Room.<br/><br/>
+                        - As a job helper, this website provides a platform for both applicant and company users.<br/> 
+                        - Applicants can create their personal page and upload resume to the server.<br/>
+                        - For applicant users, they can search positions or company in our database and apply the positions which they are interested in.<br/>
+                        - For company users, they can create their own company page, edit profile ,post and edit positions  with customized questionnaires and send messages to their applicants.<br/>
+                        - Company users can DIY questionnaire to help them know more about their applicants after posting a position. 
+                        And applicant will have chances to fill the questionnaire when they want to apply the position.<br/>
+                        - Recruiter and applicant can set up a time to have a little chat through our Chat Room before the official interviews.<br/>
+
+                    </li>
+                    <li id="ins2" class="lis2">
+                        To pay our tributes to the game Tetris, we decided to implement the touchscreen version of it. And, since this is an era of smartphones, we choose them to be the virtual controllers to play this game through Bluetooth connection.<br /><br />
+                        The basic functionalities of our version include left/right shift, rotation, and drop of the tetrominoes and ¡°pause/continue¡±, ¡°stop¡±. Extra functionalities include background color switch and difficulty adjustment.
+                        In addition, players can also use their smartphones to control the tetromino which are connected by the Bluetooth.<br /><br />
+                        This project includes three components. LCD display, Android virtual keyboard development, and Bluetooth communication.<br /><br />
+                        - The entire game was implemented on the LCD screen, which was developed by Qt (C++).<br />
+                        - The virtual keyboard was implemented as an Android application developed by JavaME.<br />
+                        - The smartphone sent the player¡¯s operations to /dev/rfcomm0 through socket connection, and the read/write module wrote those command a file in the form of strings.<br />
+                    </li>
+                    <li id="ins3" class="lis2">
+                        Detecting humans in images is a challenging task owing to their variable appearance and the wide range of poses that they can adopt. 
+                        To successfully detect a human in a room, two mainly steps are concluded: describe the objective image as a feature vector, 
+                        and use SVM to train the sample including the features. In this project, we decide to adopt HOG and LIBSVM to realize the human detection in a room.<br/><br/>
+                        HOG was first raised by Dalal and Triggs in 2005. It¡¯s proved to be an effective way to describe a human by building the feature vector. 
+                        The core thought of HOG is that the shape of an image can be described by the distribution of intensity gradients. 
+                        The implementation of these descriptors can be achieved by diving an image into small connected regions (which is called Cell), and for each cell computing a histogram of gradient directions for the pixels within the cell. The descriptor is represented by the combination of these histograms.<br/><br/>
+                        Support Vector Machine (SVM) is a learning method for machine, mainly used in classification. When some group of information is classified, when receiving new one, the machine can predict to put this new one into which of the group.
+                         LIBSVM is a popular open source machine learning library designed by Lin Chih-Jen. 
+                    </li>
+                </ul>
+            </div>
+            <div id="gitLinks"><a href="https://github.com/xlong1984">Codes on GitHub</a></div>
+            <div id="return"><img src="./PIC/images/arrow.png" width="40"></div>
+        </div>
+    </div>
+<!--End of main part-->
+<div id="footer" name="footer">
+	<div id="info" name="info">
+		<div id="phone" name="phone" style="width:298px;" class="infos">
+			<img src="./PIC/phone1.png" class="labels">
+			<div class="footDivs">
+				<span class="spans">T:617-838-5261</span>
+				<Span class="spans">H:617-838-5261</span>
+			</div>
+			
+		</div>
+		<div id="email" name="email" style="width:248px;" class="infos">
+			<img src="./PIC/plus1.png" class="labels">
+			<div class="footDivs2" style="width:80px;">
+				<a href="https://www.facebook.com/shulin.qian?fref=ts"><img src="./PIC/fb.png"/></a>
+				<a href="http://www.google.com"><img src="./PIC/google.png"/></a>
+				<a href="https://www.linkedin.com/pub/shulin-qian/90/280/814"><img src="./PIC/in.png"/ style="width:22px; height:22px;"></a>
+			</div>
+		</div>
+		<div id="follow" name="follow" style="width:348px;" class="infos">
+			<img src="./PIC/email1.png" class="labels">
+			<div class="footDivs2">
+				<span class="spans">chris.qian2013@gmail.com</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

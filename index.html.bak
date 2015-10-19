@@ -1,0 +1,211 @@
+<html>
+<head>
+    <meta http-equiv = "content-Type" content = "text/html; charset = gb2312">
+	<meta name="keywords" content="Shulin Qian">
+	<meta name="description" content="Shulin Qian's personal website">
+	<meta name="author" content="Shulin Qian">
+	<title>Shulin Qian personal website</title>
+    <link href="./CSS/home.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./JS/home.js"></script>
+    <script type="text/javascript" src="./JS/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="./JS/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript">
+        var data = { 0: ["- Volunteer: 2010 World Exposition, Shanghai, China", "", "300", "60", ""], 1: ["- Intern: Huayang Communication Equipment Company, Ltd., Xuzhou, China", "- Patent: Qian, S., Intrinsic Safety Signal Isolator Used in Coal Mine, Patent #ZL201120505218.4, 29 August 2012", "400", "130", ""], 2: ["- Intern: Demac Electrical Company, Ltd., Shanghai, China", "- Project: Mixing room redesign for Johnson & Johnson", "300", "110", ""], 3: ["- Recieved Bechalor of Science from East China University of Sci & Tech, Shanghai, China", "", "300", "80", ""], 4: ["- Project: Job Helper Website", "- Project: Tetris on Gumstix", "300", "80", ""], 5: ["- projcet: eGoods shopping website", "- Recieved Master of Science from Boston University", "300", "110", ""] }
+        $(function () {
+            $('.course_nr2 li').hover(function () {
+                $(this).find('.shiji').slideDown(600);
+            }, function () {
+                $(this).find('.shiji').slideUp(400);
+            });
+            $("#box").draggable();
+            $("#myskills").draggable();
+            $(".btns1").hover(function () {
+                $(this).children(".imgs2").stop().fadeTo(100, 1);
+            },
+                function () {
+                    $(this).children(".imgs2").stop().fadeTo(500, 0.5);
+                });
+            $("#bg").click(function () {
+                $("#bg").css({ display: "none" });
+                $("#box").slideUp(300);
+                $("#myskills").slideUp(1000);
+            })
+            $(".timelineLi").click(function (e) {
+                $("#bg").css({
+                    display: "block", height: $(document).height()
+                });
+                var $box = $('#box');
+                var num = parseInt($(this).attr("id").charAt(6));
+                var infos = data[num];
+                $box.css("top", e.pageY - 150).css("left", e.pageX - 150).css("width", parseInt(infos[2])).css("height", parseInt(infos[3])).slideDown(1000).find("#eventLi1").text(infos[0]).siblings("#eventLi2").text(infos[1]);
+            });
+            $("#skills").click(function () {
+                $("#bg").css({
+                    display: "block", height: $(document).height()
+                });
+                var $myskills = $('#myskills');
+                $myskills.css({
+                    left: ($("body").width() - $myskills.width()) / 20 - 20 + "px",
+                    top: ($(window).height() - $myskills.height()) / 2 + $(window).scrollTop() + "px",
+                }).slideDown(1000);
+            })
+        });
+    </script>
+</head>
+<body> 
+    <div id = "header">
+	    <div id="headBarRight" > 
+		    
+	    </div>
+        <div id="centerDiv">
+            <img src="./PIC/myName4.png" id="myName"/>
+            <a href="./index.html"><span id="homeTag" onmouseover="change('homeTag',this)" onmouseout="change2('homeTag',this)" style="color: red; margin-left:540px;">home</span></a>
+            <a href="./projects.html"><span id="projects" onmouseover="change('projects',this)" onmouseout="change2('projects',this)" style="margin-left: 620px;">projects</span></a>
+            <a href="./about.html"><span id="about" onmouseover="change('about',this)" onmouseout="change2('about',this)" style="margin-left: 710px;">contact</span></a>
+        </div>
+    </div>
+    <!--End of header-->
+    <div id="container">
+	    <div id="mainPart">
+            <div id="photo">
+                <img src="./PIC/me3.png" width="400" />
+            </div>
+            <div id="profo">
+                <span style="font-size:60px;display:block; float:left; width:400px;">
+                    Hello,<br/>
+                </span>
+                <span style="font-size: 30px; display: block; float: left; width:300px; ">
+                    a bit about me:
+                </span>
+                <div id="btns">
+                    <div class="btns1" id="skills">
+                        <img src="./PIC/images/circle1-1.png" class="imgs2">
+                        <span>Skills</span>
+                    </div>
+                    <div class="btns1" style="margin-left:50px;">
+                        <img src="./PIC/images/circle2-1.png" class="imgs2">
+                        <a href="./projects.html"><span>Projects</span></a>
+                    </div>
+                    <div class="btns1" style="margin-left: 50px;">
+                        <img src="./PIC/images/circle3-1.png" class="imgs2">
+                        <a href="./about.html"><span>About</span></a>
+                    </div>
+                </div>
+                <p style="text-align:left; width: 100%; float: left; word-wrap: break-word;">
+                    My name is Shulin Qian. I just got my Master of Science<br/> degree from Boston University. I am looking for a website<br/>front-end developping job. I'm available for working right now! 
+                </p>
+            </div>
+            <div class="clearfix course_nr" style=" float:left;">
+                <ul class="course_nr2">
+                    <li class="timelineLi" id="timeLi0">
+                        2010
+                        <div class="shiji">
+                            <h1>2010</h1>
+                            <p>2nd year of B.S</p>
+                        </div>
+                    </li>
+                    <li class="timelineLi" id="timeLi1">
+                        2011
+                        <div class="shiji">
+                            <h1>2011</h1>
+                            <p>3rd year of B.S</p>
+                        </div>
+                    </li>
+                    <li class="timelineLi" id="timeLi2">
+                        2012
+                        <div class="shiji">
+                            <h1>2012</h1>
+                            <p>4th year of B.S</p>
+                        </div>
+                    </li>
+                    <li class="timelineLi" id="timeLi3">
+                        2013
+                        <div class="shiji">
+                            <h1>2013</h1>
+                            <p>1st year of M.S</p>
+                        </div>
+                    </li>
+                    <li class="timelineLi" id="timeLi4">
+                        2014
+                        <div class="shiji">
+                            <h1>2014</h1>
+                            <p>2nd year of M.S</p>
+                        </div>
+                    </li>
+                    <li class="timelineLi" id="timeLi5">
+                        2015
+                        <div class="shiji">
+                            <h1>2015</h1>
+                            <p>Graduate from BU</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+	    </div>
+    </div>
+    
+<!--End of main part-->
+    <div id="footer" name="footer">
+        <div id="info" name="info">
+            <div id="phone" name="phone" style="width:298px;" class="infos">
+                <img src="./PIC/phone1.png" class="labels">
+                <div class="footDivs">
+                    <span class="spans">T:617-838-5261</span>
+                    <span class="spans">H:617-838-5261</span>
+                </div>
+
+            </div>
+            <div id="email" name="email" style="width:248px;" class="infos">
+                <img src="./PIC/plus1.png" class="labels">
+                <div class="footDivs2" style="width:80px;">
+                    <a href="https://www.facebook.com/shulin.qian?fref=ts"><img src="./PIC/fb.png" /></a>
+                    <a href="http://www.google.com"><img src="./PIC/google.png" /></a>
+                    <a href="https://www.linkedin.com/pub/shulin-qian/90/280/814"><img src="./PIC/in.png" style="width:22px; height:22px;" /></a>
+                </div>
+            </div>
+            <div id="follow" name="follow" style="width:348px;" class="infos">
+                <img src="./PIC/email1.png" class="labels">
+                <div class="footDivs2">
+                    <span class="spans">chris.qian2013@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bg"></div>
+    
+    <div id="myskills">
+        <div id="skTop">
+            <img src="./PIC/images/mk1.png">
+            <div class="blocks1">&nbsp&nbspLanguages</div>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Java</li>
+                <li>PHP</li>
+                <li>AJAX</li>
+                <li>MySQL</li>
+                <li>C</li>
+                <li>Linux Kernel</li>
+            </ul>
+        </div>
+        <div id="skLower">
+            <img src="./PIC/images/mk2.png">
+            <div class="blocks1">&nbsp&nbspSkills</div>
+            <ul>
+                <li>PHOTOSHOP</li>
+                <li>MATLAB</li>
+                <li>AutoCAD</li>
+            </ul>
+        </div>
+    </div>
+    <div id="box">
+        <ul>
+            <li id="eventLi1">Job Helper Website</li>
+            <li id="eventLi2">Tetris on Gumstix</li>
+            
+        </ul>
+    </div>
+</body>
+</html>

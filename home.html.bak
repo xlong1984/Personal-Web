@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv = "content-Type" content = "text/html; charset = gb2312">
+<link href="./CSS/home.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./JS/home.js"></script>
+</head>
+<body>
+<div id = "header" name = "header">
+	<div id="headBarLeft" name="headBarLeft"> </div>
+	<img src="./PIC/myName.png" id="myName" name="myName"/>
+	<div id="headBarRight" name="headBarRight"> 
+		<a href="./home.html"><span id="homeTag" name="homeTag" onmouseover="change('homeTag',this)" onmouseout="change2('homeTag',this)" style="color:red;">home</span></a>
+		<a href="./projects.html"><span id="projects" name="projects" onmouseover="change('projects',this)" onmouseout="change2('projects',this)">projects</span></a>
+		<a href="./about.html"><span id="about" name="about" onmouseover="change('about',this)" onmouseout="change2('about',this)">about</span></a>
+	</div>
+</div>
+<div id="container" name="container">
+	<div id="mainPart" name="mainPart">
+		HOME
+	</div>
+</div>
+<div id="footer" name="footer">
+	<div id="info" name="info">
+		<div id="phone" name="phone" style="width:298px;" class="infos">
+			<img src="./PIC/phone1.png" class="labels">
+			<div class="footDivs">
+				<span class="spans">T:617-838-5261</span>
+				<Span class="spans">H:617-838-5261</span>
+			</div>
+			
+		</div>
+		<div id="email" name="email" style="width:248px;" class="infos">
+			<img src="./PIC/plus1.png" class="labels">
+			<div class="footDivs2" style="width:80px;">
+				<a href="https://www.facebook.com/shulin.qian?fref=ts"><img src="./PIC/fb.png"/></a>
+				<a href="http://www.google.com"><img src="./PIC/google.png"/></a>
+				<a href="https://www.linkedin.com/pub/shulin-qian/90/280/814"><img src="./PIC/in.png"/ style="width:22px; height:22px;"></a>
+			</div>
+		</div>
+		<div id="follow" name="follow" style="width:348px;" class="infos">
+			<img src="./PIC/email1.png" class="labels">
+			<div class="footDivs2">
+				<span class="spans">chris.qian2013@gmail.com</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

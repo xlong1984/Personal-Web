@@ -1,0 +1,291 @@
+body{
+	margin:0 auto;
+	font-family: Prime-Regular, sans-serif;
+}
+ul{
+    list-style:none;
+}
+
+li{
+    float:left;
+}
+
+@font-face
+{
+      font-family: 'Prime-Regular';
+      font-style:  normal;
+      font-weight: 400;
+      src: url('../font/Prime-Regular.eot');
+      src: local('Prime-Regular'), 
+           url('../font/Prime-Regular.eot?#iefix') format('truetype'),
+           url('../font/Prime Regular.otf') format('truetype'), 
+           url('../font/Prime-Regular.svg#Prime-Regular') format('svg');
+}  
+
+#header{
+	float:left;
+	width:100%;
+	height:150px;
+	margin:0px;
+
+}
+
+#headBarLeft{
+	float:left;
+	height:26px;
+	width:26.5%;
+	background:black;
+	margin-top:124px;
+}
+
+#myName{
+    position:absolute;
+    z-index:5;
+	float:left;
+	margin-top:90px;
+	margin-left:10px;
+}
+
+#headBarRight{
+    z-index:4;
+	float:right;
+	height:26px;
+	width:100%;
+	background:black;
+	margin-top:124px;
+}
+
+#centerDiv{
+    z-index:5;
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    height:100%;
+
+}
+
+#centerDiv span{
+    position:absolute;
+    z-index:5;
+	cursor:pointer;
+	float:left;
+	color:white;
+	margin-top:127px;
+	margin-left:625px;
+}
+
+#container{
+	float:left;
+	height:1100px;
+	width:100%;
+    z-index:1;
+}
+
+#mainPart{
+	height:100%;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	#border:1px red solid;
+}
+
+.blocks{
+    height:100%;
+    width:80px;
+}
+
+#titleBar{
+    margin-top:30px;
+    margin-left:10px;
+    float:left;
+    width:81%;
+    height:200px;
+}
+
+.projectsDiv{
+    float:left;
+    width:400px;
+    height:400px;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.imgs{
+    cursor:pointer;
+    position:absolute;
+    z-index:3;
+    display:none;
+}
+
+.titleDiv {
+    width:400px;
+    height:400px;
+    float:left;
+    cursor:pointer;
+    position:absolute;
+    z-index:2;
+    box-shadow:#666 0px 0px 10px;
+    border-radius:8px;
+}
+
+.titleDiv span{
+    display:block;
+    width:300px;
+    float:left;
+    font-size:23px;
+}
+
+#details{
+    float:left;
+    height:968px;
+    width:100%;
+    z-index:100;
+    #display:none;
+}
+
+#projectDetails{
+    height:968px;
+    width:900px;
+    margin-left:auto;
+	margin-right:auto;
+    #border:1px red solid;
+}
+
+#projectName{
+    width:100%;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    height:50px;
+    font-size:35px;
+    text-align:center;
+    font-weight:bold;
+    #border:1px red solid;
+    
+}
+
+#imgShift{
+    overflow:hidden;
+    width:60%;
+    height:400px;
+    margin-left:20%;
+    margin-right:20%;
+    margin-top:20px;
+    box-shadow:#666 0px 0px 10px;
+    border-radius:8px;
+    border:2px black solid;
+    background-color:#F8F8F8;
+}
+
+#imgShift img{
+    margin-top:0;
+}
+
+.slideul1{
+    width:3999px;
+}
+
+.block2{
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    height:20px;
+    border-bottom:1px black solid;
+}
+
+#projectInfo{
+    width:84%;
+    height:350px;
+    margin-left:6%;
+    margin-right:10%;
+    margin-top:20px;
+    font-size:16px;
+    font-weight:bold;
+    text-align:justify; 
+    text-justify:inter-ideograph;
+    #border:1px red solid;
+}
+
+.lis2 {
+    margin-left:0;
+    display:none;
+}
+
+#gitLinks{
+    font-size:20px;
+    font-weight:bold;
+    float:left;
+    margin-left:10%;
+}
+
+#return{
+    float:right; 
+    margin-right:10%; 
+    cursor:pointer;
+}
+
+#infoBar{
+	float:left;
+	width:300px;
+	height:400px;
+	margin-left:15px;
+	margin-top:134px;
+	border:1px red solid;	
+}
+
+#contactBar{
+	float:left;
+	width:550px;
+	height:400px;
+	margin-left:15px;
+	margin-top:134px;
+	border:1px red solid;
+}
+
+#footer{
+	float:left;
+	height:130px;
+	width:100%;
+	background:black;
+}
+
+#info{
+	margin:auto;
+	width:900px;
+	height:100%;
+	#border:1px red solid;
+}
+
+.infos{
+	float:left;
+	height:100%;
+}
+
+.labels{
+	float:left;
+	margin-top:40px;
+	margin-left:30px;
+}
+
+.footDivs{
+	float:left;
+	width:150px;
+	height:50px;
+	margin-left:20px;
+	margin-top:40px;
+}
+
+.footDivs2{
+	float:left;
+	width:150px;
+	height:50px;
+	margin-left:20px;
+	margin-top:50px;
+}
+
+.spans{
+	float:left;
+	color:white;
+	font-size:17px;
+}
+

@@ -1,0 +1,22 @@
+function change(val, obj){
+	if(val=='homeTag'){
+		homeTag.style.color='white';
+	}else if(val=='projects'){
+		projects.style.color='red';
+		homeTag.style.color='white';
+	}else if(val=='about'){
+		about.style.color='red';
+		homeTag.style.color='white';
+	}
+}
+function change2(val, obj){
+	if(val=='homeTag'){
+		homeTag.style.color='red';
+	}else if(val=='projects'){
+		projects.style.color='white';
+		homeTag.style.color='red';
+	}else if(val=='about'){
+		about.style.color='white';
+		homeTag.style.color='red';
+	}
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+	    <meta http-equiv = "content-Type" content = "text/html; charset = gb2312">
+		<meta name="keywords" content="Shulin Qian">
+		<meta name="description" content="Shulin Qian's personal website">
+		<meta name="author" content="Shulin Qian">
+		<title>Shulin Qian personal website</title>
+	    <link href="./CSS/about.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./JS/jquery-2.1.4.js"></script>
+	    <script type="text/javascript" src="./JS/about.js"></script>
+        <script type="text/javascript" src="./JS/jquery-ui/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="headBarRight">
+
+            </div>
+            <div id="centerDiv">
+                <img src="./PIC/myName4.png" id="myName" />
+                <a href="./index.html"><span id="homeTag"  onmouseover="change('homeTag',this)" onmouseout="change2('homeTag',this)" style="margin-left:540px;">home</span></a>
+                <a href="./projects.html"><span id="projects" onmouseover="change('projects',this)" onmouseout="change2('projects',this)" style="margin-left: 620px;">projects</span></a>
+                <a href="./about.html"><span id="about" onmouseover="change('about',this)" onmouseout="change2('about',this)" style="color: red; margin-left: 710px;">contact</span></a>
+            </div>
+        </div>
+        <!--End of header-->
+        <div id="container" name="container">
+	        <div id="mainPart" name="mainPart">
+		        <div id="infoBar" name="infoBar">
+			        <div id="contactImg" name="contactImg">
+				        <img src="./PIC/contact.png" width="300" />
+			        </div>
+			        <div id="personalInfo" name="personalInfo">
+				        <ul>
+					        <li class="font1">Shulin Qian</li>
+					        <div id="bricks1" name="bricks1" class="bricks" style="height:70px;"></div>
+					        <li>Tel 617-838-5261</li>
+					        <li>chris.qian2013@gmail.com</li>
+					        <div id="bricks2" name="bricks2" class="bricks"></div>
+					        <li>810 Saratoga Ave</li>
+					        <li>San Jose, CA 95129</li>
+					        <div id="bricks3" name="bricks3" class="bricks" style="height:60px;"></div>
+					        <li>Follow me on</li>
+					        <div id="bricks4" name="bricks3" class="bricks" style="height:15px;"></div>
+					        <li><a href="https://www.facebook.com/shulin.qian?fref=ts"><img src="./PIC/fb2.png" width=44px;></a>&nbsp&nbsp&nbsp<a href="https://www.linkedin.com/pub/shulin-qian/90/280/814"><img src="./PIC/in2.png" width=42px;></a>&nbsp&nbsp&nbsp<a href="http://www.google.com"><img src="./PIC/google3.png" width=44px;></a></li>
+			        </div>
+		        </div>
+		        <div id="contactBar" name="contackBar" >
+			        <span id="contactHeader" name="contactHeader">looking forward to answering your email</span>
+			        <input type="text" value="Name" id="contactName" onfocus="clearInfo('name',this);" onblur="clearCheck('name', this);" class="s1"></input>
+			        <input type="text" value="Email" id="contactEmail" onfocus="clearInfo('email',this);" onblur="clearCheck('email', this);" class="s1"></input>
+			        <input type="text" value="Subject" id="contactSubject" onfocus="clearInfo('sub',this);" onblur="clearCheck('sub', this);" class="s1"></input>
+			        <textarea id="contactMessage" onfocus="clearInfo('mes',this);" onblur="clearCheck('mes', this);" class="s1">Message</textarea>
+			        <input type="button" id="submitBtn" name="submitBtn" class="btns" value="send"/>
+		        </div>
+	        </div>
+        </div>
+        <!-- End of container-->
+        <div id="footer" name="footer">
+	        <div id="info" name="info">
+		        <div id="phone" name="phone" style="width:298px;" class="infos">
+			        <img src="./PIC/phone1.png" class="labels">
+			        <div class="footDivs">
+				        <span class="spans">T:617-838-5261</span>
+				        <Span class="spans">H:617-838-5261</span>
+			        </div>
+			
+		        </div>
+		        <div id="email" name="email" style="width:248px;" class="infos">
+			        <img src="./PIC/plus1.png" class="labels">
+			        <div class="footDivs2" style="width:80px;">
+				        <a href="https://www.facebook.com/shulin.qian?fref=ts"><img src="./PIC/fb.png"/></a>
+				        <a href="http://www.google.com"><img src="./PIC/google.png"/></a>
+				        <a href="https://www.linkedin.com/pub/shulin-qian/90/280/814"><img src="./PIC/in.png"/ style="width:22px; height:22px;"></a>
+			        </div>
+		        </div>
+		        <div id="follow" name="follow" style="width:348px;" class="infos">
+			        <img src="./PIC/email1.png" class="labels">
+			        <div class="footDivs2">
+				        <span class="spans">chris.qian2013@gmail.com</span>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+    </body>
+</html>
